@@ -47,10 +47,23 @@ public void fileupploadSendKeys() //paste using sendkeys
 	selectpdf.sendKeys("C:\\Users\\Mike\\Downloads\\JAVA (2)");
 }
 
+public void newtab() throws AWTException
+{
+driver=new ChromeDriver();
+driver.navigate().to("https://www.amazon.in/"); 
+
+
+ Robot r = new Robot();        
+ r.keyPress(KeyEvent.VK_CONTROL);
+ r.keyPress(KeyEvent.VK_T);
+ r.keyRelease(KeyEvent.VK_CONTROL);  
+ r.keyRelease(KeyEvent.VK_T);
+}
 public static void main(String[] args) throws AWTException {
 		// TODO Auto-generated method stub
 	Fileupload uploadobj=new Fileupload();
 	uploadobj.uploadfile();
+	uploadobj.newtab();
 	//uploadobj.fileupploadSendKeys();
 }
 
